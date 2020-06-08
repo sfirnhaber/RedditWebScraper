@@ -14,11 +14,11 @@ AGENT_NAME = "WebScrapeBot"
 
 def parse_inputs():
     parser = OptionParser()
-    parser.add_option("-f", "--directory location", dest="dir_location", default="images",
-                      help="Name of directory location.")
-    parser.add_option("-l", "--picture limit", dest="pic_limit", type="int", default=10,
-                      help="The amount of pictures the script will try to find.")
-    parser.add_option("-s", "--subreddit", dest="subreddit", default="cats",
+    parser.add_option("-d", "--directory", dest="dir_location", default="images",
+                      help="Name of directory location to store images in.")
+    parser.add_option("-l", "--limit", dest="pic_limit", type="int", default=10,
+                      help="The amount of pictures the script will attempt to find.")
+    parser.add_option("-s", "--subreddit", dest="subreddit", default="",
                       help="The name of the subreddit to grab pictures from.")
     return parser.parse_args()[0]
 
@@ -68,6 +68,9 @@ reddit = praw.Reddit(client_id= CLIENT_ID,
                      user_agent= AGENT_NAME)
 
 options = parse_inputs()
+if (options.subreddit == ""):
+    print("Please enter a subreddit name.")
+    exit(-1)
 folder_path = create_folder(options.dir_location)
 posts = reddit.subreddit(options.subreddit).top(limit=options.pic_limit)
 pic_count = get_pictures(posts, folder_path, len(options.dir_location))
