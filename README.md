@@ -1,5 +1,5 @@
 # RedditWebScraper
-A python script that takes a subreddit name as an input, and downloads pictures that it can find from the top rated posts on that subreddit.
+A python script that takes a subreddit name as an input, and downloads pictures that it can find from the top rated posts on that subreddit. Will not download images again if previously downloaded and put in the same location.
 
 
 Options:
