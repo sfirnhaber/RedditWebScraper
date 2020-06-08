@@ -6,8 +6,13 @@ Options:
 
 
   -d, --directory
+  
     Name of directory location to store images in.
+    
   -l, --limit
+  
     The amount of pictures the script will attempt to find.
+    
   -s, --subreddit
+  
     The name of the subreddit to grab pictures from.
