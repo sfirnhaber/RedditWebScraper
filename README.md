@@ -16,3 +16,10 @@ Options:
   -s, --subreddit
   
     The name of the subreddit to grab pictures from.
+
+
+ Usage Example:
+ 
+  python redditScraper.py -s cats -l 15 -d images
+  
+  Will put up to 15 images from the "cats" subreddit and store them in a local file called "images"
