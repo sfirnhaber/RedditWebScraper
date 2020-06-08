@@ -5,21 +5,21 @@ A python script that takes a subreddit name as an input, and downloads pictures 
 Options:
 
 
-  -d, --directory
+    -d, --directory
   
     Name of directory location to store images in.
     
-  -l, --limit
+    -l, --limit
   
     The amount of pictures the script will attempt to find.
     
-  -s, --subreddit
+    -s, --subreddit
   
     The name of the subreddit to grab pictures from.
 
 
  Usage Example:
  
-  python redditScraper.py -s cats -l 15 -d images
+    python redditScraper.py -s cats -l 15 -d images
   
-  Will put up to 15 images from the "cats" subreddit and store them in a local file called "images"
+    Will put up to 15 images from the "cats" subreddit and store them in a local file called "images"
