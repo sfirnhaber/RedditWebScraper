@@ -6,6 +6,7 @@ Options:
 
 
   -d, --directory
+  
     Name of directory location to store images in.
     
   -l, --limit
